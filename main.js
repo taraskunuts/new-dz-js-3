@@ -1,29 +1,18 @@
- const lazyImages = document.querySelectorAll("img.lazy-image");
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const image = entry.target;
-        const source = img.dataset.src;
-        if (source) {
-          image.src = source;
-          image.removeAttribute("data-src");
-          image.classList.add("loaded");
-          observer.unobserve(img);
+const imagesElements = document.querySelectorAll(".image");
+const observerSettings = {
+    rootMargin: "0px",
+    threshold: 0.1
+};
+const observerCallback = (arrayImages, observer) => {
+    arrayImages.forEach((image) => {
+        if (image.isIntersecting) {
+            const photo = image.target;
+            photo.classList.add("animation");
+            observer.unobserve(photo);
         }
-      }
     });
-  });e
-  lazyImages.forEach((observedImage) => {
-    imageObserver.observe(observedImage);
-  });
-  const loadImagesButton = document.getElementById("load-images-btn");
-  loadImagesButton.addEventListener("click", () => {
-    lazyImages.forEach((image) => {
-      if (!image.classList.contains("loaded") && image.dataset.src) {
-        image.src = img.dataset.src;
-        image.removeAttribute("data-src");
-        image.classList.add("loaded");
-        imageObserver.unobserve(image);
-      }
-    });
-  });
+};
+const obServer = new IntersectionObserver(observerCallback, observerSettings);
+imagesElements.forEach((image) => {
+    obServer.observe(image);
+});

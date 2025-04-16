@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading lazy</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Завантаження зображень через JavaScript</h1>
-    <div class="image-container">
-      <img data-src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="Image 1" class="lazy-image">
-      <img data-src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="Image 2" class="lazy-image">
-      <img data-src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Image 3" class="lazy-image">
-    </div>
-    <!-- завдання -->
-    <button id="load-images-btn">Завантажити всі зображення вручну</button>
-    <!-- моя ідея -->
-  <script src="./main.js"></script>
+    <h1 class="title">Галерея квітів</h1>
+    <ul class="list">
+        <li class="item">
+            <img src="https://artside.com.ua/home/products_images/shutterstock_129170975.jpg" alt="flower1" class="image">
+        </li>
+        <li class="item">
+            <img src="https://images.joseartgallery.com/18526/conversions/landscape-painting-flowers-in-the-field-thumb1920.jpg" alt="flower2" class="image">
+        </li>
+        <li class="item">
+            <img src="https://images.1plus1.video/news-1/31452/dc89da31a5cd3461b134f688565879d7.665x370.jpg" alt="flower3" class="image">
+        </li>
+        <li class="item">
+            <img src="https://volyn.com.ua/content/thumbs/800x/6/im/gzykcu-0x0-709x456-u2eimcxxn7xi6mx52csryha6d6b6zim6.jpg" alt="flower4" class="image">
+        </li>
+        <li class="item">
+            <img src="https://img.wallpapic.com.ua/i7576-915-019/medium/mak-kviti-pole-pelyustka-shpalery.jpg" alt="flower5" class="image">
+        </li>
+    </ul>
+    <script src="./main.js"></script>
 </body>
 </html>
